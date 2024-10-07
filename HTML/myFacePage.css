@@ -1,0 +1,88 @@
+/* Reset basico e estilos gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: rgb(254, 227, 255);
+    /* Usa flexbox para o layout geral da página */
+    display: flex;
+    /* Organiza os elementos em coluna */
+    flex-direction: column;
+    /* Garante que o body ocupe toda a altuda do viewport */
+    min-height: 100vh;
+}
+
+/* Estilo de cabeçalho */
+header {
+    background-color: rgb(197, 114, 200);
+    color: rgb(50, 0, 52);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 2rem;
+    /* Usa o flexbox para o layout do cabeçalho */
+    display: flex;
+    /* Distribui os elementos horizontalmente */
+    justify-content: space-between;
+    /* Alinha os elementos do nav verticalmente */
+    align-items: center;
+}
+
+/* Estilo do conteudo principal */
+main {
+    /* Permite que o conteudo principal cresça e ocupe o espaço disponivel */
+    flex: 1;
+    width: 80%;
+    margin: 20px auto;
+    /* Usa o flexbox para o layout do conteudo principal */
+    display: flex;
+    /* Permite que os elementos quebrem para a proxima linha */
+    flex-wrap: wrap;
+}
+
+section {
+    /* Ocupa toda a largura */
+    flex: 0 0 100%;
+    background-color: rgba(252, 173, 255, 0.54);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border: 1px solid rgb(92, 1, 95);
+    border-radius: 20px;
+}
+
+/* Carrossel organização no CSS */
+.carousel {
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.slides img.active {
+    display: block;
+}
+
+/* Estilos de rodape */
+footer {
+    background-color: rgb(197, 114, 200);
+    color: rgb(50, 0, 52);
+    text-align: center;
+    padding: 1rem;
+}
